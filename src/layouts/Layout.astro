@@ -5,6 +5,7 @@ import '@fontsource/poppins/600.css';
 import '@fontsource/poppins/700.css';
 import '../styles/global.css';
 import Header from '../components/Header.astro';
+import CursorToggle from '../components/CursorToggle.vue';
 ---
 
 
@@ -22,6 +23,7 @@ import Header from '../components/Header.astro';
 	</head>
 	<body>
 		<Header />
+		<CursorToggle client:media="(pointer: fine) and (min-width: 768px)" />
 		<main class="pt-20">
 			<slot />
 		</main>
@@ -34,5 +36,6 @@ import Header from '../components/Header.astro';
 		margin: 0;
 		width: 100%;
 		height: 100%;
+		scroll-behavior: smooth;
 	}
 </style>

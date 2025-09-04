@@ -1,11 +1,18 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import Hero from '../components/Hero.vue';
+import InnovationSection from '../components/InnovationSection.vue';
+import BentoSection from '../components/BentoSection.vue';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import CaseStudies from '../components/CaseStudies.vue';
+import WorldMapSection from '../components/WorldMapSection.vue';
+import ContactCTA from '../components/ContactCTA.vue';
 ---
 
 <Layout>
-	<Welcome />
+	<Hero client:load id="home" />
+	<InnovationSection id="innovation" />
+	<BentoSection id="features" />
+	<CaseStudies id="stories" />
+	<WorldMapSection client:load id="worldmap" />
+	<ContactCTA id="contact-cta" />
 </Layout>
