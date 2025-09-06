@@ -41,8 +41,8 @@ interface Feature {
 
 const features: Feature[] = [
   {
-    name: "Helps agents help customers",
-    description: "Reduce handling time with guided responses and workflows.",
+    name: "Mock Interviews that Work",
+    description: "Practice with AI-driven mock interviews that simulate real technical questions and recruiter follow-ups.",
     href: "/",
     image:
       "https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -50,8 +50,8 @@ const features: Feature[] = [
     class: "lg:row-start-1 lg:row-end-4 lg:col-start-2 lg:col-end-3",
   },
   {
-    name: "Self‑service that works",
-    description: "Deflect repetitive questions with precise answers.",
+    name: "Safe and Supportive",
+    description: "A guided environment that reduces stress and helps you build confidence without the fear of failure.",
     href: "/",
     image:
       "https://images.pexels.com/photos/3861964/pexels-photo-3861964.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -59,22 +59,22 @@ const features: Feature[] = [
     class: "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3",
   },
   {
-    name: "Safe and effective",
-    description: "Guardrails prevent hallucinations and keep answers on-brand.",
+    name: "Smart Practice",
+    description: "Interactive coding challenges and instant AI feedback help you sharpen your problem-solving skills faster.",
     href: "/",
     cta: "Learn more",
     class: "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4",
   },
   {
-    name: "Speeds automation",
-    description: "Spin up virtual agents and workflows in minutes, not months.",
+    name: "Personalized Pathways",
+    description: "AI tailors your practice journey with interview questions, coding tasks, and feedback aligned to your target role.",
     href: "/",
     cta: "Explore",
     class: "lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:row-end-2",
   },
   {
-    name: "Operational insights",
-    description: "Uncover unknown unknowns with real‑time analytics.",
+    name: "Career Insights",
+    description: "Get real-time analytics on your performance, improvement areas, and job readiness scores.",
     href: "/",
     image:
       "https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",

@@ -29,13 +29,13 @@
             <div class="flex items-start gap-4">
               <div>
                 <p class="text-4xl font-extrabold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                  +40%
+                  +65%
                 </p>
               </div>
               <div class="flex-1">
-                <p class="font-semibold text-gray-900">Carbon Health</p>
+                <p class="font-semibold text-gray-900">Candidate Confidence</p>
                 <p class="text-sm text-gray-600 mt-1">
-                  Automation reduces patient wait times and boosts clinic answer rates 40%
+                  Mock interviews on TechTerview increase candidate confidence levels by 65%, helping them perform better in real interviews.
                 </p>
               </div>
             </div>
@@ -79,19 +79,19 @@ interface RightCard {
 
 const rightCards: RightCard[] = [
   {
-    delta: '-53%',
-    title: 'WaFd Bank',
-    description: 'Conversational AI reduces check balance time by 90%',
+    delta: '-40%',
+    title: 'Interview Anxiety',
+    description: 'Structured practice sessions on TechTerview reduce interview-related stress and anxiety by 40%.',
   },
   {
-    delta: '-50%',
-    title: 'Farfetch Automation',
-    description: 'Improves handle times by 50%',
+    delta: '+55%',
+    title: 'Coding Success Rate',
+    description: 'Candidates who used TechTerview’s coding arena improved their problem-solving success rate by 55%.',
   },
   {
-    delta: '+26%',
-    title: 'JK Moving Services',
-    description: 'AI-based optimization increases sales conversations by 26%',
+    delta: '+30%',
+    title: 'Job Readiness',
+    description: 'AI-powered feedback and personalized practice boosted overall job readiness scores by 30%.',
   },
 ];
 </script>
