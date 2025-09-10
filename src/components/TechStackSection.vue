@@ -1,3 +1,13 @@
+<script setup>
+// Import tech icons
+import vueIcon from '../assets/tech-icons/vue.svg';
+import nuxtIcon from '../assets/tech-icons/nuxt.svg';
+import tailwindIcon from '../assets/tech-icons/tailwind.svg';
+import appwriteIcon from '../assets/tech-icons/appwrite.svg';
+import nodeIcon from '../assets/tech-icons/node.svg';
+import tensorflowIcon from '../assets/tech-icons/tensorflow.svg';
+</script>
+
 <template>
   <section class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -25,7 +35,7 @@
               class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow group">
               <div
                 class="w-20 h-20 mx-auto mb-6 bg-green-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                <img src="/src/assets/tech-icons/vue.svg" alt="Vue.js" class="w-10 h-10 brightness-0 invert" />
+                <img :src="vueIcon" alt="Vue.js" class="w-10 h-10 brightness-0 invert" />
               </div>
               <h4 class="text-lg font-bold text-gray-900 mb-2">Vue.js</h4>
               <p class="text-sm text-gray-600">Progressive JavaScript framework for building user interfaces</p>
@@ -36,7 +46,7 @@
               class="bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow group">
               <div
                 class="w-20 h-20 mx-auto mb-6 bg-emerald-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                <img src="/src/assets/tech-icons/nuxt.svg" alt="Nuxt.js" class="w-10 h-10 brightness-0 invert" />
+                <img :src="nuxtIcon" alt="Nuxt.js" class="w-10 h-10 brightness-0 invert" />
               </div>
               <h4 class="text-lg font-bold text-gray-900 mb-2">Nuxt.js</h4>
               <p class="text-sm text-gray-600">Full-stack Vue framework for production-ready applications</p>
@@ -47,7 +57,7 @@
               class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow group">
               <div
                 class="w-20 h-20 mx-auto mb-6 bg-blue-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                <img src="/src/assets/tech-icons/tailwind.svg" alt="Tailwind CSS"
+                <img :src="tailwindIcon" alt="Tailwind CSS"
                   class="w-10 h-10 brightness-0 invert" />
               </div>
               <h4 class="text-lg font-bold text-gray-900 mb-2">Tailwind CSS</h4>
@@ -65,7 +75,7 @@
               class="bg-gradient-to-br from-pink-50 to-pink-100 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow group">
               <div
                 class="w-20 h-20 mx-auto mb-6 bg-pink-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                <img src="/src/assets/tech-icons/appwrite.svg" alt="Appwrite" class="w-10 h-10 brightness-0 invert" />
+                <img :src="appwriteIcon" alt="Appwrite" class="w-10 h-10 brightness-0 invert" />
               </div>
               <h4 class="text-lg font-bold text-gray-900 mb-2">Appwrite</h4>
               <p class="text-sm text-gray-600">Open-source backend server for web and mobile developers</p>
@@ -76,7 +86,7 @@
               class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow group">
               <div
                 class="w-20 h-20 mx-auto mb-6 bg-green-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                <img src="/src/assets/tech-icons/node.svg" alt="Node.js" class="w-10 h-10 brightness-0 invert" />
+                <img :src="nodeIcon" alt="Node.js" class="w-10 h-10 brightness-0 invert" />
               </div>
               <h4 class="text-lg font-bold text-gray-900 mb-2">Node.js</h4>
               <p class="text-sm text-gray-600">JavaScript runtime for server-side development</p>
@@ -107,7 +117,7 @@
               class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow group">
               <div
                 class="w-20 h-20 mx-auto mb-6 bg-orange-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                <img src="/src/assets/tech-icons/tensorflow.svg" alt="TensorFlow.js"
+                <img :src="tensorflowIcon" alt="TensorFlow.js"
                   class="w-10 h-10 brightness-0 invert" />
               </div>
               <h4 class="text-lg font-bold text-gray-900 mb-2">TensorFlow.js</h4>
@@ -138,7 +148,7 @@
               class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow group">
               <div
                 class="w-20 h-20 mx-auto mb-6 bg-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                <img src="/src/assets/tech-icons/appwrite.svg" alt="Appwrite Hosting"
+                <img :src="appwriteIcon" alt="Appwrite Hosting"
                   class="w-10 h-10 brightness-0 invert" />
               </div>
               <h4 class="text-lg font-bold text-gray-900 mb-2">Appwrite Hosting</h4>
@@ -190,8 +200,3 @@
   </section>
 </template>
 
-<script>
-export default {
-  name: 'TechStackSection'
-}
-</script>
