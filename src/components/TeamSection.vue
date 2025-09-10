@@ -1,9 +1,5 @@
 <script setup>
-// Import team member images
-import francisImg from '../assets/team/francis.jpg';
-import kyleImg from '../assets/team/kyle.jpg';
-import yuanImg from '../assets/team/yuan.jpg';
-import kithImg from '../assets/team/kith.jpg';
+// Team images are now served from public directory
 </script>
 
 <template>
@@ -30,7 +26,7 @@ import kithImg from '../assets/team/kith.jpg';
           <!-- Francis Image -->
           <div
             class="w-32 h-32 mx-auto mb-6 overflow-hidden rounded-2xl group-hover:scale-105 transition-transform duration-300">
-            <img :src="francisImg" alt="Francis" class="w-full h-full object-cover" />
+            <img src="/team/francis.jpg" alt="Francis" class="w-full h-full object-cover" />
           </div>
 
           <div class="text-center">
@@ -69,7 +65,7 @@ import kithImg from '../assets/team/kith.jpg';
           <!-- Kyle Image -->
           <div
             class="w-32 h-32 mx-auto mb-6 overflow-hidden rounded-2xl group-hover:scale-105 transition-transform duration-300">
-            <img :src="kyleImg" alt="Kyle" class="w-full h-full object-cover" />
+            <img src="/team/kyle.jpg" alt="Kyle" class="w-full h-full object-cover" />
           </div>
 
           <div class="text-center">
@@ -107,7 +103,7 @@ import kithImg from '../assets/team/kith.jpg';
           <!-- Yuan Image -->
           <div
             class="w-32 h-32 mx-auto mb-6 overflow-hidden rounded-2xl group-hover:scale-105 transition-transform duration-300">
-            <img :src="yuanImg" alt="Yuan" class="w-full h-full object-cover" />
+            <img src="/team/yuan.jpg" alt="Yuan" class="w-full h-full object-cover" />
           </div>
 
           <div class="text-center">
@@ -186,7 +182,7 @@ import kithImg from '../assets/team/kith.jpg';
           <!-- Kith Image -->
           <div
             class="w-32 h-32 mx-auto mb-6 overflow-hidden rounded-2xl group-hover:scale-105 transition-transform duration-300">
-            <img :src="kithImg" alt="Kith" class="w-full h-full object-cover" />
+            <img src="/team/kith.jpg" alt="Kith" class="w-full h-full object-cover" />
           </div>
 
           <div class="text-center">
