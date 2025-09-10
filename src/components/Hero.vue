@@ -170,10 +170,12 @@ export default {
   },
   methods: {
     handleGetStarted() {
-      console.log('Get Started clicked')
+      // Navigate to the signup page
+      window.open('https://app.techterview.online/signup', '_blank')
     },
     handleWatchDemo() {
-      console.log('Watch Demo clicked')
+      // Navigate to the about page
+      window.location.href = '/about'
     }
   }
 }

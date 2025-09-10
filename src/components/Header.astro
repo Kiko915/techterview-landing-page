@@ -1,15 +1,15 @@
 ---
-import logo from '../assets/logo/techterview_wordmark_colored.webp';
-import ShimmerButton from './ui/ShimmerButton.vue';
-import LiquidGlass from './ui/LiquidGlass.vue';
+import logo from "../assets/logo/techterview_wordmark_colored.webp";
+import ShimmerButton from "./ui/ShimmerButton.vue";
+import LiquidGlass from "./ui/LiquidGlass.vue";
 ---
 
 <header class="fixed top-0 left-0 right-0 z-50">
   <div class="max-w-6xl mx-auto mt-4 px-4 sm:px-6 lg:px-8">
     <!-- LiquidGlass for Chromium browsers -->
     <div class="liquid-glass-nav hidden relative">
-      <LiquidGlass 
-        client:load 
+      <LiquidGlass
+        client:load
         :radius="9999"
         :frost="0.2"
         :alpha="0.8"
@@ -17,126 +17,420 @@ import LiquidGlass from './ui/LiquidGlass.vue';
         container-class="rounded-full !relative !w-full h-16"
       >
         <div class="flex items-center justify-between h-16 px-6">
-      <!-- Logo -->
-      <div class="flex-shrink-0">
-        <a href="/#home" class="flex items-center">
-          <img src={logo.src} alt="Techterview" class="h-8 w-auto" />
-        </a>
-      </div>
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <a href="/#home" class="flex items-center">
+              <img src={logo.src} alt="Techterview" class="h-8 w-auto" />
+            </a>
+          </div>
 
-      <!-- Desktop Navigation -->
-      <div class="hidden md:block">
-        <div class="ml-10 flex items-baseline space-x-8">
-          <a href="/#home" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200">
-            Home
-          </a>
-          <a href="/about" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200">
-            About
-          </a>
-          <a href="/#features" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200">
-            Features
-          </a>
-          <a href="/contact" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200">
-            Contact
-          </a>
-        </div>
-      </div>
-
-      <!-- Desktop Buttons -->
-      <div class="hidden md:flex items-center space-x-4">
-        <a href="/login" class="text-gray-700 hover:text-blue-600 px-4 py-2 text-sm font-medium transition-colors duration-200">
-          Log in
-        </a>
-        <ShimmerButton client:load class="text-sm">
-          <a href="/signup" class="text-white no-underline">
-            Sign Up
-          </a>
-        </ShimmerButton>
-      </div>
-
-      <!-- Mobile menu button -->
-      <div class="md:hidden">
-        <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <!-- Hamburger icon -->
-          <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-          <!-- Close icon (hidden by default) -->
-          <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
-    </div>
-
-    <!-- Mobile menu (hidden by default) -->
-    <div class="mobile-menu hidden md:hidden">
-      <div class="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-md rounded-lg mt-2 border border-gray-200/20 shadow-lg">
-        <a href="/#home" class="text-gray-900 hover:text-blue-600 block px-3 py-2 text-base font-medium transition-colors duration-200">
-          Home
-        </a>
-        <a href="/about" class="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium transition-colors duration-200">
-          About
-        </a>
-        <a href="/#features" class="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium transition-colors duration-200">
-          Features
-        </a>
-        <a href="/contact" class="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium transition-colors duration-200">
-          Contact
-        </a>
-        <div class="border-t border-gray-200 pt-3 mt-3">
-          <a href="/login" class="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium transition-colors duration-200">
-            Log in
-          </a>
-          <div class="mt-2 mx-3">
-            <ShimmerButton client:load class="text-base w-full">
-              <a href="/signup" class="text-white no-underline block">
-                Sign Up
+          <!-- Desktop Navigation -->
+          <div class="hidden lg:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a
+                href="/#home"
+                class="nav-link text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200 relative"
+                data-page="home"
+              >
+                Home
+                <span
+                  class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 transition-transform duration-200 origin-left"
+                ></span>
               </a>
+              <a
+                href="/about"
+                class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200 relative"
+                data-page="about"
+              >
+                About
+                <span
+                  class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 transition-transform duration-200 origin-left"
+                ></span>
+              </a>
+              <a
+                href="/#features"
+                class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200 relative"
+                data-page="features"
+              >
+                Features
+                <span
+                  class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 transition-transform duration-200 origin-left"
+                ></span>
+              </a>
+              <a
+                href="/contact"
+                class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200 relative"
+                data-page="contact"
+              >
+                Contact
+                <span
+                  class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 transition-transform duration-200 origin-left"
+                ></span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Desktop Buttons -->
+          <div class="hidden lg:flex items-center space-x-4">
+            <a
+              href="/login"
+              class="text-gray-700 hover:text-blue-600 px-4 py-2 text-sm font-medium transition-colors duration-200"
+            >
+              Log in
+            </a>
+            <ShimmerButton client:load class="text-sm">
+              <a href="/signup" class="text-white no-underline"> Sign Up </a>
             </ShimmerButton>
           </div>
-                  </div>
 
           <!-- Mobile menu button -->
-          <div class="md:hidden">
-            <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
+          <div class="lg:hidden">
+            <button
+              type="button"
+              class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
               <span class="sr-only">Open main menu</span>
               <!-- Hamburger icon -->
-              <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              <svg
+                class="block h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"></path>
               </svg>
               <!-- Close icon (hidden by default) -->
-              <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              <svg
+                class="hidden h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"></path>
               </svg>
             </button>
           </div>
         </div>
 
+        <!-- Mobile menu (hidden by default) -->
+        <div class="mobile-menu hidden lg:hidden">
+          <div
+            class="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-md rounded-lg mt-2 border border-gray-200/20 shadow-lg"
+          >
+            <a
+              href="/#home"
+              class="nav-link-mobile text-gray-900 hover:text-blue-600 block px-3 py-2 text-base font-medium transition-colors duration-200 rounded-lg"
+              data-page="home"
+            >
+              Home
+            </a>
+            <a
+              href="/about"
+              class="nav-link-mobile text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium transition-colors duration-200 rounded-lg"
+              data-page="about"
+            >
+              About
+            </a>
+            <a
+              href="/#features"
+              class="nav-link-mobile text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium transition-colors duration-200 rounded-lg"
+              data-page="features"
+            >
+              Features
+            </a>
+            <a
+              href="/contact"
+              class="nav-link-mobile text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium transition-colors duration-200 rounded-lg"
+              data-page="contact"
+            >
+              Contact
+            </a>
+            <div class="border-t border-gray-200 pt-3 mt-3">
+              <a
+                href="/login"
+                class="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium transition-colors duration-200"
+              >
+                Log in
+              </a>
+              <div class="mt-2 mx-3">
+                <ShimmerButton client:load class="text-base w-full">
+                  <a href="/signup" class="text-white no-underline block">
+                    Sign Up
+                  </a>
+                </ShimmerButton>
+              </div>
+            </div>
+          </div>
+        </div>
       </LiquidGlass>
-    </div>
-    <!-- LiquidGlass mobile menu (outside LiquidGlass to avoid clipping) -->
-    <div class="liquid-glass-nav-mobile">
-      <div class="mobile-menu hidden md:hidden">
-        <div class="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-md rounded-lg mt-2 border border-gray-200/20 shadow-lg">
-          <a href="/#home" class="text-gray-900 hover:text-blue-600 block px-3 py-2 text-base font-medium transition-colors duration-200">
-            Home
-          </a>
-          <a href="/about" class="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium transition-colors duration-200">
-            About
-          </a>
-          <a href="/#features" class="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium transition-colors duration-200">
-            Features
-          </a>
-          <a href="/contact" class="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium transition-colors duration-200">
-            Contact
-          </a>
-          <div class="border-t border-gray-200 pt-3 mt-3">
-            <a href="/login" class="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium transition-colors duration-200">
+      <!-- LiquidGlass mobile menu (outside LiquidGlass to avoid clipping) -->
+      <div class="liquid-glass-nav-mobile">
+        <div class="mobile-menu hidden lg:hidden">
+          <div
+            class="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-md rounded-lg mt-2 border border-gray-200/20 shadow-lg"
+          >
+            <a
+              href="/#home"
+              class="nav-link-mobile text-gray-900 hover:text-blue-600 block px-3 py-2 text-base font-medium transition-colors duration-200 rounded-lg"
+              data-page="home"
+            >
+              Home
+            </a>
+            <a
+              href="/about"
+              class="nav-link-mobile text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium transition-colors duration-200 rounded-lg"
+              data-page="about"
+            >
+              About
+            </a>
+            <a
+              href="/#features"
+              class="nav-link-mobile text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium transition-colors duration-200 rounded-lg"
+              data-page="features"
+            >
+              Features
+            </a>
+            <a
+              href="/contact"
+              class="nav-link-mobile text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium transition-colors duration-200 rounded-lg"
+              data-page="contact"
+            >
+              Contact
+            </a>
+            <div class="border-t border-gray-200 pt-3 mt-3">
+              <a
+                href="/login"
+                class="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium transition-colors duration-200"
+              >
+                Log in
+              </a>
+              <div class="mt-2 mx-3">
+                <ShimmerButton client:load class="text-base w-full">
+                  <a href="/signup" class="text-white no-underline block">
+                    Sign Up
+                  </a>
+                </ShimmerButton>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fallback nav for Safari/Firefox -->
+      <nav
+        class="fallback-nav bg-white/80 backdrop-blur-md border border-gray-200/20 rounded-full shadow-sm hidden"
+      >
+        <div class="flex items-center justify-between h-16 px-6">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <a href="/" class="flex items-center">
+              <img src={logo.src} alt="Techterview" class="h-8 w-auto" />
+            </a>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden lg:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a
+                href="/#home"
+                class="nav-link text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200 relative"
+                data-page="home"
+              >
+                Home
+                <span
+                  class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 transition-transform duration-200 origin-left"
+                ></span>
+              </a>
+              <a
+                href="/about"
+                class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200 relative"
+                data-page="about"
+              >
+                About
+                <span
+                  class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 transition-transform duration-200 origin-left"
+                ></span>
+              </a>
+              <a
+                href="/#features"
+                class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200 relative"
+                data-page="features"
+              >
+                Features
+                <span
+                  class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 transition-transform duration-200 origin-left"
+                ></span>
+              </a>
+              <a
+                href="/contact"
+                class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200 relative"
+                data-page="contact"
+              >
+                Contact
+                <span
+                  class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 transition-transform duration-200 origin-left"
+                ></span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Desktop Buttons -->
+          <div class="hidden lg:flex items-center space-x-4">
+            <a
+              href="/login"
+              class="text-gray-700 hover:text-blue-600 px-4 py-2 text-sm font-medium transition-colors duration-200"
+            >
               Log in
             </a>
-            <div class="mt-2 mx-3">
+            <ShimmerButton client:load class="text-sm">
+              <a href="/signup" class="text-white no-underline"> Sign Up </a>
+            </ShimmerButton>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="lg:hidden">
+            <button
+              type="button"
+              class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <!-- Hamburger icon -->
+              <svg
+                class="block h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+              <!-- Close icon (hidden by default) -->
+              <svg
+                class="hidden h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile menu (modern glass dropdown) -->
+        <div
+          class="mobile-menu hidden lg:hidden fixed left-0 right-0 top-20 px-4 z-[60]"
+        >
+          <div
+            class="rounded-2xl bg-white/80 backdrop-blur-xl border border-white/20 shadow-2xl p-2 space-y-1"
+          >
+            <a
+              href="/#home"
+              class="nav-link-mobile group flex items-center justify-between rounded-xl px-4 py-3 text-gray-800 hover:text-blue-600 hover:bg-white/70 transition"
+              data-page="home"
+            >
+              <span>Home</span>
+              <svg
+                class="h-4 w-4 opacity-0 group-hover:opacity-100 transition"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"></path></svg
+              >
+            </a>
+            <a
+              href="/about"
+              class="nav-link-mobile group flex items-center justify-between rounded-xl px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-white/70 transition"
+              data-page="about"
+            >
+              <span>About</span>
+              <svg
+                class="h-4 w-4 opacity-0 group-hover:opacity-100 transition"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"></path></svg
+              >
+            </a>
+            <a
+              href="/#features"
+              class="nav-link-mobile group flex items-center justify-between rounded-xl px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-white/70 transition"
+              data-page="features"
+            >
+              <span>Features</span>
+              <svg
+                class="h-4 w-4 opacity-0 group-hover:opacity-100 transition"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"></path></svg
+              >
+            </a>
+            <a
+              href="/contact"
+              class="nav-link-mobile group flex items-center justify-between rounded-xl px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-white/70 transition"
+              data-page="contact"
+            >
+              <span>Contact</span>
+              <svg
+                class="h-4 w-4 opacity-0 group-hover:opacity-100 transition"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"></path></svg
+              >
+            </a>
+            <div class="my-1 border-t border-white/20"></div>
+            <a
+              href="/login"
+              class="block rounded-xl px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-white/70 transition"
+            >
+              Log in
+            </a>
+            <div class="px-3 pb-1">
               <ShimmerButton client:load class="text-base w-full">
                 <a href="/signup" class="text-white no-underline block">
                   Sign Up
@@ -145,171 +439,159 @@ import LiquidGlass from './ui/LiquidGlass.vue';
             </div>
           </div>
         </div>
-      </div>
+      </nav>
     </div>
-    
-    <!-- Fallback nav for Safari/Firefox -->
-    <nav class="fallback-nav bg-white/80 backdrop-blur-md border border-gray-200/20 rounded-full shadow-sm hidden">
-      <div class="flex items-center justify-between h-16 px-6">
-        <!-- Logo -->
-        <div class="flex-shrink-0">
-          <a href="/" class="flex items-center">
-            <img src={logo.src} alt="Techterview" class="h-8 w-auto" />
-          </a>
-        </div>
-
-        <!-- Desktop Navigation -->
-        <div class="hidden md:block">
-          <div class="ml-10 flex items-baseline space-x-8">
-            <a href="/#home" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200">
-              Home
-            </a>
-            <a href="/about" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200">
-              About
-            </a>
-            <a href="/#features" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200">
-              Features
-            </a>
-            <a href="/contact" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200">
-              Contact
-            </a>
-          </div>
-        </div>
-
-        <!-- Desktop Buttons -->
-        <div class="hidden md:flex items-center space-x-4">
-          <a href="/login" class="text-gray-700 hover:text-blue-600 px-4 py-2 text-sm font-medium transition-colors duration-200">
-            Log in
-          </a>
-          <ShimmerButton client:load class="text-sm">
-            <a href="/signup" class="text-white no-underline">
-              Sign Up
-            </a>
-          </ShimmerButton>
-        </div>
-
-        <!-- Mobile menu button -->
-        <div class="md:hidden">
-          <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
-            <span class="sr-only">Open main menu</span>
-            <!-- Hamburger icon -->
-            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-            <!-- Close icon (hidden by default) -->
-            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <!-- Mobile menu (modern glass dropdown) -->
-      <div class="mobile-menu hidden md:hidden fixed left-0 right-0 top-20 px-4 z-[60]">
-        <div class="rounded-2xl bg-white/80 backdrop-blur-xl border border-white/20 shadow-2xl p-2 space-y-1">
-          <a href="/#home" class="group flex items-center justify-between rounded-xl px-4 py-3 text-gray-800 hover:text-blue-600 hover:bg-white/70 transition">
-            <span>Home</span>
-            <svg class="h-4 w-4 opacity-0 group-hover:opacity-100 transition" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-          </a>
-          <a href="/about" class="group flex items-center justify-between rounded-xl px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-white/70 transition">
-            <span>About</span>
-            <svg class="h-4 w-4 opacity-0 group-hover:opacity-100 transition" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-          </a>
-          <a href="/#features" class="group flex items-center justify-between rounded-xl px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-white/70 transition">
-            <span>Features</span>
-            <svg class="h-4 w-4 opacity-0 group-hover:opacity-100 transition" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-          </a>
-          <a href="/contact" class="group flex items-center justify-between rounded-xl px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-white/70 transition">
-            <span>Contact</span>
-            <svg class="h-4 w-4 opacity-0 group-hover:opacity-100 transition" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-          </a>
-          <div class="my-1 border-t border-white/20"></div>
-          <a href="/login" class="block rounded-xl px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-white/70 transition">
-            Log in
-          </a>
-          <div class="px-3 pb-1">
-            <ShimmerButton client:load class="text-base w-full">
-              <a href="/signup" class="text-white no-underline block">
-                Sign Up
-              </a>
-            </ShimmerButton>
-          </div>
-        </div>
-      </div>
-    </nav>
   </div>
-</header>
 
-<script>
-  // Browser detection and navigation switching
-  document.addEventListener('DOMContentLoaded', function() {
-    // Detect browser support for SVG filters
-    const isChromium = /Chrome|Chromium|Edge/.test(navigator.userAgent) && !/Version.*Safari/.test(navigator.userAgent);
-    const liquidGlassNav = document.querySelector('.liquid-glass-nav');
-    const fallbackNav = document.querySelector('.fallback-nav');
-    
-    console.log('Browser detection:', { 
-      userAgent: navigator.userAgent, 
-      isChromium, 
-      liquidGlassNav: !!liquidGlassNav, 
-      fallbackNav: !!fallbackNav 
-    });
-    
-    if (isChromium && liquidGlassNav && fallbackNav) {
-      // Show LiquidGlass for Chromium browsers
-      console.log('Showing LiquidGlass');
-      liquidGlassNav.classList.remove('hidden');
-      fallbackNav.classList.add('hidden');
-    } else if (fallbackNav && liquidGlassNav) {
-      // Show fallback for Safari/Firefox
-      console.log('Showing fallback');
-      fallbackNav.classList.remove('hidden');
-      liquidGlassNav.classList.add('hidden');
-    }
+  <script>
+    // Browser detection and navigation switching
+    document.addEventListener("DOMContentLoaded", function () {
+      // Detect browser support for SVG filters
+      const isChromium =
+        /Chrome|Chromium|Edge/.test(navigator.userAgent) &&
+        !/Version.*Safari/.test(navigator.userAgent);
+      const liquidGlassNav = document.querySelector(".liquid-glass-nav");
+      const fallbackNav = document.querySelector(".fallback-nav");
 
-    // Delegated mobile menu handling (works for both nav variants and late-mounted content)
-    document.addEventListener('click', (event) => {
-      const target = event.target as Element;
+      console.log("Browser detection:", {
+        userAgent: navigator.userAgent,
+        isChromium,
+        liquidGlassNav: !!liquidGlassNav,
+        fallbackNav: !!fallbackNav,
+      });
 
-      // Toggle when clicking any .mobile-menu-button
-      const btn = (target as any).closest?.('.mobile-menu-button');
-      if (btn) {
-        const container = (btn as any).closest?.('.liquid-glass-nav, .fallback-nav');
-        // Prefer global LiquidGlass mobile menu to avoid clipping
-        const globalLGMenu = document.querySelector('.liquid-glass-nav-mobile .mobile-menu');
-        const menu = globalLGMenu || container?.querySelector('.mobile-menu');
-        const hamburger = btn.querySelector('svg:nth-of-type(1)');
-        const close = btn.querySelector('svg:nth-of-type(2)');
-        if (!menu) return;
-
-        const willOpen = menu.classList.contains('hidden');
-        menu.classList.toggle('hidden');
-        if (willOpen) {
-          hamburger?.classList.add('hidden');
-          close?.classList.remove('hidden');
-          btn.setAttribute('aria-expanded', 'true');
-        } else {
-          hamburger?.classList.remove('hidden');
-          close?.classList.add('hidden');
-          btn.setAttribute('aria-expanded', 'false');
-        }
-        return;
+      if (isChromium && liquidGlassNav && fallbackNav) {
+        // Show LiquidGlass for Chromium browsers
+        console.log("Showing LiquidGlass");
+        liquidGlassNav.classList.remove("hidden");
+        fallbackNav.classList.add("hidden");
+      } else if (fallbackNav && liquidGlassNav) {
+        // Show fallback for Safari/Firefox
+        console.log("Showing fallback");
+        fallbackNav.classList.remove("hidden");
+        liquidGlassNav.classList.add("hidden");
       }
 
-      // Outside click: close any open mobile menu
-      document.querySelectorAll('.mobile-menu').forEach((el) => {
-        const menu = el as Element;
-        if (!menu.classList.contains('hidden')) {
-          menu.classList.add('hidden');
-          const container = menu.closest('.liquid-glass-nav, .fallback-nav') || document;
-          const b = (container as any).querySelector?.('.mobile-menu-button');
-          const h = b?.querySelector('svg:nth-of-type(1)');
-          const c = b?.querySelector('svg:nth-of-type(2)');
-          h?.classList.remove('hidden');
-          c?.classList.add('hidden');
-          b?.setAttribute('aria-expanded', 'false');
+      // Active state management
+      function setActiveNavigation() {
+        const currentPath = window.location.pathname;
+        const currentHash = window.location.hash;
+
+        // Remove all active states first
+        document
+          .querySelectorAll(".nav-link, .nav-link-mobile")
+          .forEach((link) => {
+            link.classList.remove("active");
+            // Reset desktop underline
+            const underline = link.querySelector("span");
+            if (underline) {
+              underline.style.transform = "scale-x(0)";
+            }
+          });
+
+        // Determine current page
+        let currentPage = "home"; // default
+        if (currentPath === "/about") {
+          currentPage = "about";
+        } else if (currentPath === "/contact") {
+          currentPage = "contact";
+        } else if (currentHash === "#features") {
+          currentPage = "features";
         }
+
+        // Set active state for matching links
+        document
+          .querySelectorAll(`[data-page="${currentPage}"]`)
+          .forEach((link) => {
+            link.classList.add("active");
+            // Show desktop underline
+            const underline = link.querySelector("span");
+            if (underline) {
+              underline.style.transform = "scale-x(1)";
+            }
+          });
+      }
+
+      // Set initial active state
+      setActiveNavigation();
+
+      // Update active state on navigation (for SPA-like behavior)
+      window.addEventListener("popstate", setActiveNavigation);
+      window.addEventListener("hashchange", setActiveNavigation);
+
+      // Delegated mobile menu handling (works for both nav variants and late-mounted content)
+      document.addEventListener("click", (event) => {
+        const target = event.target as Element;
+
+        // Toggle when clicking any .mobile-menu-button
+        const btn = (target as any).closest?.(".mobile-menu-button");
+        if (btn) {
+          const container = (btn as any).closest?.(
+            ".liquid-glass-nav, .fallback-nav",
+          );
+          // Prefer global LiquidGlass mobile menu to avoid clipping
+          const globalLGMenu = document.querySelector(
+            ".liquid-glass-nav-mobile .mobile-menu",
+          );
+          const menu = globalLGMenu || container?.querySelector(".mobile-menu");
+          const hamburger = btn.querySelector("svg:nth-of-type(1)");
+          const close = btn.querySelector("svg:nth-of-type(2)");
+          if (!menu) return;
+
+          const willOpen = menu.classList.contains("hidden");
+          menu.classList.toggle("hidden");
+          if (willOpen) {
+            hamburger?.classList.add("hidden");
+            close?.classList.remove("hidden");
+            btn.setAttribute("aria-expanded", "true");
+          } else {
+            hamburger?.classList.remove("hidden");
+            close?.classList.add("hidden");
+            btn.setAttribute("aria-expanded", "false");
+          }
+          return;
+        }
+
+        // Outside click: close any open mobile menu
+        document.querySelectorAll(".mobile-menu").forEach((el) => {
+          const menu = el as Element;
+          if (!menu.classList.contains("hidden")) {
+            menu.classList.add("hidden");
+            const container =
+              menu.closest(".liquid-glass-nav, .fallback-nav") || document;
+            const b = (container as any).querySelector?.(".mobile-menu-button");
+            const h = b?.querySelector("svg:nth-of-type(1)");
+            const c = b?.querySelector("svg:nth-of-type(2)");
+            h?.classList.remove("hidden");
+            c?.classList.add("hidden");
+            b?.setAttribute("aria-expanded", "false");
+          }
+        });
       });
     });
-  });
-</script>
+  </script>
+
+  <style>
+    /* Active state styles */
+    .nav-link.active {
+      color: #2563eb; /* text-blue-600 */
+      font-weight: 600; /* font-semibold */
+    }
+
+    .nav-link-mobile.active {
+      color: #2563eb; /* text-blue-600 */
+      font-weight: 600; /* font-semibold */
+      background-color: #eff6ff; /* bg-blue-50 */
+    }
+
+    /* Hover effects for underlines */
+    .nav-link:hover span {
+      transform: scale-x(1);
+    }
+
+    /* Smooth transitions */
+    .nav-link span {
+      transition: transform 0.2s ease-in-out;
+    }
+  </style>
+</header>
