@@ -34,7 +34,6 @@ interface Feature {
   name: string;
   description: string;
   href: string;
-  cta: string;
   image?: string;
   class?: string;
 }
@@ -46,7 +45,6 @@ const features: Feature[] = [
     href: "/",
     image:
       "https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    cta: "Learn more",
     class: "lg:row-start-1 lg:row-end-4 lg:col-start-2 lg:col-end-3",
   },
   {
@@ -55,30 +53,26 @@ const features: Feature[] = [
     href: "/",
     image:
       "https://images.pexels.com/photos/3861964/pexels-photo-3861964.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    cta: "Learn more",
     class: "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3",
   },
   {
     name: "Smart Practice",
     description: "Interactive coding challenges and instant AI feedback help you sharpen your problem-solving skills faster.",
     href: "/",
-    cta: "Learn more",
     class: "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4",
   },
   {
     name: "Personalized Pathways",
     description: "AI tailors your practice journey with interview questions, coding tasks, and feedback aligned to your target role.",
     href: "/",
-    cta: "Explore",
+
     class: "lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:row-end-2",
   },
   {
     name: "Career Insights",
     description: "Get real-time analytics on your performance, improvement areas, and job readiness scores.",
     href: "/",
-    image:
-      "https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    cta: "View dashboards",
+    image: "https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     class: "lg:col-start-3 lg:col-end-4 lg:row-start-2 lg:row-end-4",
   },
 ];

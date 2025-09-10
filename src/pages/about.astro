@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AboutHero from '../components/AboutHero.vue';
+import OriginSection from '../components/OriginSection.vue';
+import TeamSection from '../components/TeamSection.vue';
+import TechStackSection from '../components/TechStackSection.vue';
+import ContactCTA from '../components/ContactCTA.vue';
+---
+
+<Layout title="About Us - TechTerview">
+  <AboutHero client:load />
+  <OriginSection client:load />
+  <TeamSection client:load />
+  <TechStackSection client:load />
+  <ContactCTA client:load />
+</Layout>
