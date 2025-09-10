@@ -21,7 +21,8 @@
           <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8">
             <h3 class="text-2xl font-bold text-gray-900 mb-4">The Problem We Saw</h3>
             <p class="text-gray-700 leading-relaxed">
-              In August 2025, we witnessed countless talented developers struggle with tech interviews—not because they lacked
+              In August 2025, we witnessed countless talented developers struggle with tech interviews—not because they
+              lacked
               skills,
               but because they weren't prepared for the unique challenges of technical interviews. Traditional
               preparation
@@ -71,7 +72,8 @@
               class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 group-hover:shadow-xl group-hover:border-indigo-200 transition-all duration-300">
               <div class="flex items-center justify-between mb-4">
                 <h4 class="text-2xl font-bold text-gray-900">MVP Launch</h4>
-                <span class="px-4 py-2 bg-indigo-100 text-indigo-700 text-sm font-medium rounded-full">October 2025</span>
+                <span class="px-4 py-2 bg-indigo-100 text-indigo-700 text-sm font-medium rounded-full">October
+                  2025</span>
               </div>
               <p class="text-gray-600 leading-relaxed">
                 First version with basic coding challenges and interview simulation features to validate our concept and
@@ -86,7 +88,8 @@
               class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 group-hover:shadow-xl group-hover:border-purple-200 transition-all duration-300">
               <div class="flex items-center justify-between mb-4">
                 <h4 class="text-2xl font-bold text-gray-900">AI Integration</h4>
-                <span class="px-4 py-2 bg-purple-100 text-purple-700 text-sm font-medium rounded-full">Mid October 2025</span>
+                <span class="px-4 py-2 bg-purple-100 text-purple-700 text-sm font-medium rounded-full">Mid October
+                  2025</span>
               </div>
               <p class="text-gray-600 leading-relaxed">
                 Added AI-powered mock interviews, personalized feedback, and adaptive learning paths to revolutionize
