@@ -140,11 +140,8 @@
           class="group bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-green-200">
           <!-- James Image Placeholder -->
           <div
-            class="w-32 h-32 bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl mx-auto mb-6 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform duration-300">
-            <svg class="w-16 h-16 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd">
-              </path>
-            </svg>
+            class="w-32 h-32 mx-auto mb-6 overflow-hidden rounded-2xl group-hover:scale-105 transition-transform duration-300">
+            <img src="/team/james.jpg" alt="Kith" class="w-full h-full object-cover" />
           </div>
 
           <div class="text-center">
