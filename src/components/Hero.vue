@@ -2,58 +2,67 @@
   <div class="relative min-h-screen -mt-20 pt-20 flex items-center justify-center overflow-hidden" :id="id">
     <!-- Background Elements -->
     <div class="absolute inset-0 bg-gradient-to-b from-blue-50 via-blue-100/30 to-blue-50"></div>
-    <div class="absolute inset-0 pointer-events-none [background:radial-gradient(600px_400px_at_50%_20%,rgba(59,130,246,0.18),transparent_70%)]"></div>
-    
+    <div
+      class="absolute inset-0 pointer-events-none [background:radial-gradient(600px_400px_at_50%_20%,rgba(59,130,246,0.18),transparent_70%)]">
+    </div>
+
     <!-- FlickeringGrid Background -->
-    <FlickeringGrid
-      class="absolute inset-0 z-0 [mask-image:radial-gradient(600px_circle_at_center,white,transparent)]"
-      :square-size="4"
-      :grid-gap="6"
-      color="#60A5FA"
-      :max-opacity="0.3"
-      :flicker-chance="0.1"
-    />
-    
+    <FlickeringGrid class="absolute inset-0 z-0 [mask-image:radial-gradient(600px_circle_at_center,white,transparent)]"
+      :square-size="4" :grid-gap="6" color="#60A5FA" :max-opacity="0.3" :flicker-chance="0.1" />
+
     <!-- Floating Elements removed for a cleaner look -->
 
     <!-- Main Content -->
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <!-- Badge -->
-      <div class="mt-6 sm:mt-8 md:mt-10 mb-8 inline-flex items-center px-4 py-2 bg-blue-100 rounded-full text-blue-800 text-sm font-medium relative">
+      <div
+        class="mt-6 sm:mt-8 md:mt-10 mb-8 inline-flex items-center px-4 py-2 bg-blue-100 rounded-full text-blue-800 text-sm font-medium relative">
         <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-          <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+          <path fill-rule="evenodd"
+            d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+            clip-rule="evenodd"></path>
         </svg>
         {{ badgeText }}
-        <BorderBeam
-        :size="100"
-        :duration="12"
-        :delay="9"
-        :border-width="2"
-        />
+        <BorderBeam :size="100" :duration="12" :delay="9" :border-width="2" />
       </div>
 
       <!-- Main Headline -->
-      <BlurReveal>
-      <h1 class="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+      <BlurReveal v-if="isLargeDevice">
+        <h1 class="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+          <span class="block">Ace Your Next</span>
+          <span class="bg-gradient-to-r from-blue-600 via-blue-400 to-blue-800 bg-clip-text text-transparent">
+            Tech Interview
+          </span>
+          <span class="block">with
+            <FlipWords :words="[
+              'Confidence',
+              'Preparedness',
+              'Success',
+              'Expertise',
+              'AI',
+              'TechTerview'
+            ]" :duration="3000" />
+          </span>
+        </h1>
+      </BlurReveal>
+
+      <!-- Fallback for mobile/tablet without blur effect -->
+      <h1 v-else class="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
         <span class="block">Ace Your Next</span>
         <span class="bg-gradient-to-r from-blue-600 via-blue-400 to-blue-800 bg-clip-text text-transparent">
           Tech Interview
         </span>
-        <span class="block">with 
-            <FlipWords
-              :words="[
-                'Confidence',
-                'Preparedness',
-                'Success',
-                'Expertise',
-                'AI',
-                'TechTerview'
-              ]"
-              :duration="3000"
-            />
+        <span class="block">with
+          <FlipWords :words="[
+            'Confidence',
+            'Preparedness',
+            'Success',
+            'Expertise',
+            'AI',
+            'TechTerview'
+          ]" :duration="3000" />
         </span>
       </h1>
-      </BlurReveal>
       <!-- Subheading -->
       <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
         {{ description }}
@@ -63,16 +72,17 @@
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
         <ShimmerButton @click="handleGetStarted" shimmer-size="2px" class="bg-blue-500">
           <span class="mr-2">{{ primaryButtonText }}</span>
-          <svg class="inline w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="inline w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+            viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
           </svg>
         </ShimmerButton>
-        
-        <button 
-          @click="handleWatchDemo"
-          class="group relative px-8 py-2 bg-gradient-to-r text-lg from-gray-50 to-white hover:from-white hover:to-gray-50 text-gray-700 hover:text-blue-600 font-normal rounded-full border-2 border-gray-200/60 hover:border-blue-200 shadow-lg hover:shadow-xl backdrop-blur-sm transition-all duration-300 transform hover:scale-105"
-        >
-          <div class="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+        <button @click="handleWatchDemo"
+          class="group relative px-8 py-2 bg-gradient-to-r text-lg from-gray-50 to-white hover:from-white hover:to-gray-50 text-gray-700 hover:text-blue-600 font-normal rounded-full border-2 border-gray-200/60 hover:border-blue-200 shadow-lg hover:shadow-xl backdrop-blur-sm transition-all duration-300 transform hover:scale-105">
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          </div>
           <div class="relative flex items-center">
 
             {{ secondaryButtonText }}
@@ -90,7 +100,8 @@
                 <a v-if="logo.href" :href="logo.href" class="shrink-0 opacity-70 hover:opacity-100 transition">
                   <img :src="logo.src" :alt="logo.alt" class="h-8 sm:h-10 grayscale hover:grayscale-0 transition" />
                 </a>
-                <img v-else :src="logo.src" :alt="logo.alt" class="h-8 sm:h-10 shrink-0 grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition" />
+                <img v-else :src="logo.src" :alt="logo.alt"
+                  class="h-8 sm:h-10 shrink-0 grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition" />
               </template>
             </template>
             <template v-else>
@@ -122,6 +133,19 @@ export default {
     FlipWords,
     ShimmerButton,
     FlickeringGrid
+  },
+  data() {
+    return {
+      isLargeDevice: false
+    }
+  },
+  mounted() {
+    // Check if device is large (1024px+) for blur effects
+    this.checkDeviceSize()
+    window.addEventListener('resize', this.checkDeviceSize)
+  },
+  beforeUnmount() {
+    window.removeEventListener('resize', this.checkDeviceSize)
   },
   props: {
     badgeText: {
@@ -169,6 +193,10 @@ export default {
     }
   },
   methods: {
+    checkDeviceSize() {
+      // Enable blur effects only on large devices (1024px+)
+      this.isLargeDevice = window.innerWidth >= 1024
+    },
     handleGetStarted() {
       // Navigate to the signup page
       window.open('https://app.techterview.online/signup', '_blank')
@@ -186,12 +214,15 @@ export default {
   0% {
     transform: translate(0px, 0px) scale(1);
   }
+
   33% {
     transform: translate(30px, -50px) scale(1.1);
   }
+
   66% {
     transform: translate(-20px, 20px) scale(0.9);
   }
+
   100% {
     transform: translate(0px, 0px) scale(1);
   }

@@ -31,7 +31,7 @@
       </div>
 
       <!-- Main Headline -->
-      <BlurReveal>
+      <BlurReveal v-if="isLargeDevice">
         <h1 class="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
           <span class="block">Empowering</span>
           <span class="bg-gradient-to-r from-blue-600 via-blue-400 to-blue-800 bg-clip-text text-transparent">
@@ -52,6 +52,27 @@
           </span>
         </h1>
       </BlurReveal>
+      
+      <!-- Fallback for mobile/tablet without blur effect -->
+      <h1 v-else class="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+        <span class="block">Empowering</span>
+        <span class="bg-gradient-to-r from-blue-600 via-blue-400 to-blue-800 bg-clip-text text-transparent">
+          Tech Careers
+        </span>
+        <span class="block">Through 
+          <FlipWords
+            :words="[
+              'Innovation',
+              'Excellence',
+              'Preparation',
+              'Success',
+              'Growth',
+              'Achievement'
+            ]"
+            :duration="3000"
+          />
+        </span>
+      </h1>
 
       <!-- Subheading -->
       <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -74,6 +95,25 @@ export default {
     BorderBeam,
     FlipWords,
     FlickeringGrid
+  },
+  data() {
+    return {
+      isLargeDevice: false
+    }
+  },
+  mounted() {
+    // Check if device is large (1024px+) for blur effects
+    this.checkDeviceSize()
+    window.addEventListener('resize', this.checkDeviceSize)
+  },
+  beforeUnmount() {
+    window.removeEventListener('resize', this.checkDeviceSize)
+  },
+  methods: {
+    checkDeviceSize() {
+      // Enable blur effects only on large devices (1024px+)
+      this.isLargeDevice = window.innerWidth >= 1024
+    }
   }
 }
 </script>
