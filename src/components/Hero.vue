@@ -199,7 +199,7 @@ export default {
     },
     handleGetStarted() {
       // Navigate to the signup page
-      window.open('https://app.techterview.online/signup', '_blank')
+      window.open('https://app-techterview.vercel.app', '_blank')
     },
     handleWatchDemo() {
       // Navigate to the about page
