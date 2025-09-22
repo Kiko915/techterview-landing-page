@@ -1,0 +1,202 @@
+{
+  "about": {
+    "title": "TechTerview - The Ultimate Interview Prep Platform",
+    "description": "Ace your next tech interview with confidence. TechTerview is a comprehensive platform that helps you practice real-world coding challenges, participate in mock interviews, and get expert insights — all designed to help you land your dream job in tech.",
+    "tagline": "Ace Your Next Tech Interview with Preparedness",
+    "mission": "Empowering developers and tech professionals to excel in their career journey through innovative interview preparation tools and personalized learning experiences."
+  },
+  "team": {
+    "description": "A passionate group of engineers, designers, and educators dedicated to transforming tech careers",
+    "members": [
+      {
+        "name": "Francis",
+        "role": "Co-Founder & CEO",
+        "description": "Visionary leader passionate about revolutionizing tech interview preparation and helping developers succeed.",
+        "expertise": ["Leadership", "Product Strategy", "Tech Career Development"]
+      },
+      {
+        "name": "Kyle",
+        "role": "Co-Founder & CTO",
+        "description": "Technical architect and AI specialist driving innovation in interview preparation technology.",
+        "expertise": ["AI/ML", "System Architecture", "Technical Innovation"]
+      },
+      {
+        "name": "Yuan",
+        "role": "Head of Product",
+        "description": "Product strategist focused on creating exceptional user experiences and driving product innovation.",
+        "expertise": ["Product Strategy", "User Experience", "Innovation"]
+      },
+      {
+        "name": "James",
+        "role": "Lead Designer",
+        "description": "Creative designer crafting intuitive and beautiful user interfaces that enhance the learning experience.",
+        "expertise": ["UI/UX Design", "Visual Design", "User Experience"]
+      },
+      {
+        "name": "Kith",
+        "role": "Senior Engineer",
+        "description": "Full-stack engineer building scalable systems and ensuring platform reliability and performance.",
+        "expertise": ["Full-Stack Development", "System Architecture", "Platform Engineering"]
+      }
+    ],
+    "founding_story": "TechTerview was founded by Francis and Kyle, two passionate engineers who experienced the challenges of technical interviews firsthand and wanted to help other developers succeed in their tech careers."
+  },
+  "features": [
+    {
+      "id": "mock-interviews",
+      "title": "Mock Interviews",
+      "description": "Practice with realistic interview scenarios conducted by industry experts and AI-powered interviewers.",
+      "icon": "interview",
+      "benefits": [
+        "Real-time feedback on your performance",
+        "Industry-standard interview formats",
+        "Practice with different difficulty levels",
+        "Record and review your sessions"
+      ]
+    },
+    {
+      "id": "coding-challenges",
+      "title": "Coding Challenges",
+      "description": "Solve real-world coding problems from top tech companies with detailed explanations and multiple solutions.",
+      "icon": "code",
+      "benefits": [
+        "Problems from FAANG companies",
+        "Multiple programming languages supported",
+        "Step-by-step solution explanations",
+        "Time complexity analysis"
+      ]
+    },
+    {
+      "id": "ai-feedback",
+      "title": "AI-Powered Feedback",
+      "description": "Get instant, personalized feedback on your coding style, problem-solving approach, and interview performance.",
+      "icon": "ai",
+      "benefits": [
+        "Real-time code analysis",
+        "Personalized improvement suggestions",
+        "Performance tracking over time",
+        "Adaptive learning recommendations"
+      ]
+    },
+    {
+      "id": "personalized-pathways",
+      "title": "Personalized Learning Pathways",
+      "description": "Customized study plans based on your skill level, target companies, and career goals.",
+      "icon": "pathway",
+      "benefits": [
+        "Tailored to your experience level",
+        "Company-specific preparation tracks",
+        "Progress tracking and milestones",
+        "Flexible scheduling options"
+      ]
+    },
+    {
+      "id": "career-insights",
+      "title": "Career Insights & Analytics",
+      "description": "Access industry trends, salary data, and career guidance to make informed decisions about your tech career.",
+      "icon": "insights",
+      "benefits": [
+        "Real-time market trends",
+        "Salary benchmarking tools",
+        "Career path recommendations",
+        "Industry expert advice"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "id": "what-is-techterview",
+      "question": "What is TechTerview?",
+      "answer": "TechTerview is a comprehensive interview preparation platform designed specifically for tech professionals. It combines mock interviews, coding challenges, AI-powered feedback, and personalized learning paths to help you ace your next tech interview and advance your career."
+    },
+    {
+      "id": "who-created-techterview",
+      "question": "Who created TechTerview?",
+      "answer": "TechTerview was founded by Francis (Co-Founder & CEO) and Kyle (Co-Founder & CTO), two visionary engineers passionate about revolutionizing tech interview preparation. Our team also includes Yuan (Head of Product), James (Lead Designer), and Kith (Senior Engineer) - a passionate group of engineers, designers, and educators dedicated to transforming tech careers."
+    },
+    {
+      "id": "meet-the-team",
+      "question": "Tell me about the TechTerview team",
+      "answer": "Our team consists of five dedicated professionals: Francis, our visionary CEO focused on revolutionizing interview prep; Kyle, our technical CTO and AI specialist; Yuan, our product strategist creating exceptional user experiences; James, our creative lead designer; and Kith, our senior full-stack engineer ensuring platform reliability. Together, we're passionate about helping developers succeed in their tech careers."
+    },
+    {
+      "id": "founders-background",
+      "question": "What's the background of TechTerview's founders?",
+      "answer": "Francis, our Co-Founder & CEO, is a visionary leader passionate about revolutionizing tech interview preparation and helping developers succeed. Kyle, our Co-Founder & CTO, is a technical architect and AI specialist driving innovation in interview preparation technology. Together, they combined their expertise to create a platform that addresses real challenges in technical interviews."
+    },
+    {
+      "id": "is-techterview-free",
+      "question": "Is TechTerview free?",
+      "answer": "TechTerview offers both free and premium tiers. Our free plan includes access to basic coding challenges and limited mock interviews. Premium subscribers get unlimited access to all features, including advanced AI feedback, personalized pathways, and exclusive content from industry experts."
+    },
+    {
+      "id": "how-does-ai-work",
+      "question": "How does the AI feedback system work?",
+      "answer": "Our AI system analyzes your code in real-time, evaluating factors like algorithm efficiency, code quality, best practices, and problem-solving approach. It provides instant feedback and suggestions for improvement, helping you learn and adapt quickly. The AI also tracks your progress over time to personalize future recommendations."
+    },
+    {
+      "id": "who-is-techterview-for",
+      "question": "Who is TechTerview for?",
+      "answer": "TechTerview is perfect for software developers, engineers, data scientists, and other tech professionals at any career stage. Whether you're a recent graduate preparing for your first job, an experienced developer looking to switch companies, or someone aiming for senior positions at top tech companies, our platform adapts to your needs."
+    },
+    {
+      "id": "how-to-start",
+      "question": "How can I start using TechTerview?",
+      "answer": "Getting started is simple! Click the 'Sign Up' button to create your free account. Complete a brief assessment to help us understand your current skill level and goals, then choose your personalized learning pathway. You can immediately start practicing with coding challenges and schedule your first mock interview."
+    },
+    {
+      "id": "supported-languages",
+      "question": "What programming languages are supported?",
+      "answer": "TechTerview supports all major programming languages including Python, JavaScript, Java, C++, C#, Go, Rust, Swift, Kotlin, and more. Our platform automatically detects your preferred language and provides language-specific feedback and best practices."
+    },
+    {
+      "id": "mock-interview-format",
+      "question": "What types of mock interviews are available?",
+      "answer": "We offer various interview formats including technical coding interviews, system design sessions, behavioral interviews, and company-specific interview styles. You can practice with both AI-powered interviewers and live sessions with industry professionals from top tech companies."
+    },
+    {
+      "id": "progress-tracking",
+      "question": "How do you track my progress?",
+      "answer": "TechTerview provides detailed analytics including your coding performance trends, interview scores, skill development over time, and areas for improvement. Our dashboard shows your readiness level for different companies and positions, helping you focus your preparation efforts effectively."
+    }
+  ],
+  "pricing": {
+    "free": {
+      "name": "Free",
+      "price": "$0",
+      "features": [
+        "5 coding challenges per month",
+        "1 AI mock interview per month",
+        "Basic progress tracking",
+        "Community access"
+      ]
+    },
+    "premium": {
+      "name": "Premium",
+      "price": "$29/month",
+      "features": [
+        "Unlimited coding challenges",
+        "Unlimited AI mock interviews",
+        "Live expert interviews",
+        "Advanced AI feedback",
+        "Personalized learning paths",
+        "Career insights & analytics",
+        "Priority support"
+      ]
+    }
+  },
+  "contact": {
+    "support_email": "support@techterview.com",
+    "sales_email": "sales@techterview.com",
+    "social_media": {
+      "twitter": "@techterview",
+      "linkedin": "company/techterview",
+      "github": "techterview"
+    }
+  },
+  "metadata": {
+    "last_updated": "2025-09-22",
+    "version": "1.2",
+    "content_language": "en"
+  }
+}
