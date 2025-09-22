@@ -20,7 +20,7 @@
         <div class="header-info">
           <div class="chat-avatar">
             <img 
-              src="/src/assets/logo/techterview_symbol_colored.webp" 
+              src="/logo/techterview_symbol_colored.webp" 
               alt="TechTerview" 
               class="avatar-image"
             />
@@ -50,7 +50,7 @@
         <div v-if="messages.length === 0" class="message ai-message">
           <div class="message-avatar">
             <img 
-              src="/src/assets/logo/techterview_symbol_colored.webp" 
+              src="/logo/techterview_symbol_colored.webp" 
               alt="TechTerview" 
               class="avatar-image-small"
             />
@@ -79,7 +79,7 @@
         >
           <div class="message-avatar" v-if="message.type === 'ai'">
             <img 
-              src="/src/assets/logo/techterview_symbol_colored.webp" 
+              src="/logo/techterview_symbol_colored.webp" 
               alt="TechTerview" 
               class="avatar-image-small"
             />
@@ -94,7 +94,7 @@
         <div v-if="isTyping" class="message ai-message">
           <div class="message-avatar">
             <img 
-              src="/src/assets/logo/techterview_symbol_colored.webp" 
+              src="/logo/techterview_symbol_colored.webp" 
               alt="TechTerview" 
               class="avatar-image-small"
             />
